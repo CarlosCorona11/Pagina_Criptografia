@@ -25,17 +25,17 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
 }
 .academica{
-    display: grid;
+    display: inline-block;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .hobbie{
-    display: grid;
+    display: inline-block;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .cont{
-    display: grid;
+    display: inline-block;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -54,6 +54,7 @@ header{
 .navegador-principal {
     padding: 1rem;
     justify-content: space-between;
+    flex-direction: column;
 
 }
 .navegador-principal a{
@@ -64,6 +65,27 @@ header{
     padding: 1rem;
 }
 
+@media (min-width: 768px) {
+    .navegador-principal{
+        flex-direction: row;
+    }
+
+    .academica{
+        display: grid;
+
+    }
+
+    .hobbie{
+        display: grid;
+
+    }
+
+    .cont{
+        display: grid;
+
+    }
+}
+
 .navegador-principal a:hover{
     background-color: var(--primario); 
     color: var(--oscuro); 
@@ -71,11 +93,13 @@ header{
 
 .personal{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: stretch;
     text-align:center;
     flex-direction: column;
 }
+
+
 
 
 .boton-contacto {
