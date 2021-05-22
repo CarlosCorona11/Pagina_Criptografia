@@ -20,6 +20,95 @@ header{
     text-align:center;
     flex-direction: column;
 }
+
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+    list-style: none;
+    margin: 0; 
+    background: var(--secundario);
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: var(--blanco);
+  }
+  
+  .navigation a:hover {
+    background: var(--primario);
+  }
+  
+  @media all and (max-width: 800px) {
+    .navigation {
+      justify-content: space-around;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+    background-color: var(--secundario);
+    display: flex;
+   /* justify-content: space-around;*/
+    flex-wrap: nowrap;
+    
+}
+
+.items a{
+    color: var(--blanco);
+    text-decoration: none;  
+    font-size: 2rem;  
+    padding: 1rem;
+    
+}
+
+
 .contactos{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -39,22 +128,26 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+
 .contenedor{
     width: 120rem;
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
     margin-left: auto;
+    align-items: center;
 
 }
 
 .nav-bg{
     background-color: var(--secundario);
+    align-items: center;
 }
 .navegador-principal {
     padding: 1rem;
     justify-content: space-between;
     flex-direction: column;
+    align-items: center;
 
 }
 .navegador-principal a{
@@ -65,10 +158,38 @@ header{
     padding: 1rem;
 }
 
-@media (min-width: 768px) {
-    .navegador-principal{
-        flex-direction: row;
-    }
+.ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+   
+}
+
+.navegacion{
+    float: left;
+
+}
+
+.navegacion a{
+    display: block;
+    color: white;
+    text-align: initial;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navegacion a:hover {
+    background-color: #111;
+}
+
+@media (min-width: 768px) {    
+
+
 
     .academica{
         display: grid;
